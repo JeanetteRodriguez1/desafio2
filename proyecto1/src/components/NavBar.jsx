@@ -1,3 +1,4 @@
+import CartWidget from "./CartWidget/CartWidget"
 import "./Navbar.css";
 import logo from "./src/MalaMia.png"
 
@@ -14,6 +15,8 @@ function Navbar (){
                 </ul>
             </nav>
             <a className="cta" href="#"><button>Contacto</button></a>
+
+            <CartWidget/>
         </>
     )
 }

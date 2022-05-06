@@ -1,5 +1,8 @@
 .App {
+  margin: 0 ;
   text-align: center;
+  box-sizing: border-box;
+  background-color: #fff4f4 ;
 }
 
 .App-logo {
@@ -35,4 +38,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+button {
+  font-size: calc(10px + 2vmin);
+}
+.contenedorClick{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(4, 4, 4);
+  font-size: large;
 }
