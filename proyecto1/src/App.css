@@ -9,6 +9,15 @@
   height: 40vmin;
   pointer-events: none;
 }
+body{
+  box-sizing: border-box;
+  margin: 0 ;
+  text-align: center;
+  background-image: url(./imagenes/malaIm.png);
+  font-family: sans-serif;
+  display: flex;
+
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
