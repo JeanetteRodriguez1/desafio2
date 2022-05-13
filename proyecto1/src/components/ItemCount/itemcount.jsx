@@ -26,7 +26,7 @@ export function ItemCount({stock,initial,onAdd}){
             <div className="card">
             <img className="imgCard" src="https://media.istockphoto.com/photos/female-fashion-clothes-flat-lay-square-picture-id1160533209?s=612x612" alt="" />
             <h3>Producto</h3>
-            <h6>$100</h6>
+            <h6>$700</h6>
                 <div>
                     <button  onClick={restar} >-</button>
                     <button  onClick={sumar}>+</button>
