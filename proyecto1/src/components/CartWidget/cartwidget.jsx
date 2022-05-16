@@ -1,5 +1,6 @@
 import { BsCart2 } from "react-icons/bs";
 import "./cartWidget.css"
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
 

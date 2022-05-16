@@ -32,7 +32,7 @@ h3{
     padding-top: 10px;
 }
 
-.galeria{
+.galeria .galer{
     display: flex;
     flex-wrap: 100%;
     width: 100%;
