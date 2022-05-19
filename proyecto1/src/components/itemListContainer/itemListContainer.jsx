@@ -6,7 +6,63 @@ import { getFetch } from "../helpers/getFetch"
 
 
 
-const productos = [
+const ItemListContainer = ()=>{
+    const [products, setItem] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    const {id} = useParams()    
+    const {category} = useParams()    
+
+    useEffect(()=>{
+        if(id){
+        if(category){
+            getFetch()
+                .then(resp => setItem(resp.filter((prods)=>prods.category === id)))
+                .then(resp => setItem(resp.filter((prods)=>prods.category === category)))
+                .catch((err)=>console.log(err))
+                .finally (()=>setLoading(false))
+        }else{
+            getFetch()
+                .then(resp => setItem(resp))
+                .catch((err)=>console.log(err))
+                .finally (()=>setLoading(false))
+
+        }
+    }   
+        }, [id]),
+        },[category]
+    
+
+    return(
+
+        <div className="container">
+            {loading ?
+            <h2>Cargando..</h2>
+            :
+            <ItemList items={products}/>
+            }
+        </div>
+    )
+    
+    export default ItemListContainer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*const productos = [
     {id:1, name: "Camisa", price:100, img: "https://media.istockphoto.com/photos/female-fashion-clothes-flat-lay-square-picture-id1160533209?s=612x612"},
     {id:2,name: "Campera",price:200,img: "https://media.istockphoto.com/photos/young-woman-wearing-sterile-face-mask-picture-id1210830201"},
     {id:3,name: "Jeans",price:300,img: "https://media.istockphoto.com/photos/smiling-woman-leaning-on-white-wall-with-bag-picture-id857963320"}
@@ -64,7 +120,6 @@ const ItemListContainer = ()=>{
             }
         </div>
     )
-    }
+    }*/
 
 
-export default ItemListContainer

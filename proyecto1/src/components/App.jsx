@@ -5,9 +5,45 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/itemListContainer/itemListContainer'
 import {ItemCount} from './components/ItemCount/itemCount'
 import { Cart } from './components/Cart/Cart';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  return (
+    <BrowserRouter>
+      <div>       
+        <Navbar/>
+
+        <Routes>
+          <Route path ="/" element = {<ItemListContainer/>} />
+          <Route path ="/category/:id" element = {<ItemListContainer/>} />
+          <Route path ="/category/:category" element = {<ItemListContainer/>} />
+          <Route path='/detail/:id' element = {<ItemDetailContainer/>} />
+          <Route path='/cart' element = {<Cart/>} />
+
+          <Route path= "/*" element = {<Navigate to  = "/" replace />} />
+          
+          
+              
+        </Routes>
+      </div>
+    </BrowserRouter>
+  )
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*const [count, setCount] = useState(0)
   return (
     <div className="App">
           <header className="App-header">
@@ -16,7 +52,7 @@ function App() {
 
           <ItemListContainer greeting='Soy el contenedor'/>
           return 
-          (
+    (
         <>
         
           <Navbar/>
@@ -44,6 +80,6 @@ function App() {
     
 
   )
-}
+}*/
 
 export default App

@@ -8,6 +8,13 @@ img{
     width: 100px;
 }
 
+.contrNav{
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 li, a, button{
     
     font-family: Verdana, Tahoma, sans-serif;
@@ -27,9 +34,60 @@ header{
 
 .logo{
     cursor: pointer;
+    width: 130px;
 }
 
-.navLinks{
+.navbar{
+    width: 80%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+     display: inline-block;
+     position: relative;
+     list-style: none;
+     margin: 0 20px;
+   
+}
+
+.navbar ul li a{
+    text-decoration: none;    
+    color: white;
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+}
+
+.navbar ul li a::before{
+    height: 3px;
+    width: 0%;
+    background-color:  rgb(107, 105, 105);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.4s ease-out;
+}
+
+
+.navbar ul li a:hover::before{
+    width: 100%;
+
+}
+
+.navbar ul li a::before{
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    background-color: rgb(107, 105, 105);
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s ease-out;
+}
+
+/*.navLinks{
     list-style-type: none;
 }
 .navLinks li{
@@ -55,10 +113,7 @@ button{
 
 button:hover{
     background-color: #f81774;
-}
-
-
-
+}*/
 
 
 .bNeon {

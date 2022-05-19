@@ -19,7 +19,7 @@ export const ItemDetailContainer = () => {
     return(
         <div>
             {loader ?
-            <h2>Loading</h2>
+            <h2>Cargando</h2>
             :
                 <ItemDetail product = {product} />
             }
