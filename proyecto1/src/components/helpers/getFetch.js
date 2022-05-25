@@ -34,17 +34,54 @@ const products = [
     img: "https://media.istockphoto.com/photos/attractive-afro-american-woman-picture-id807375326?s=612x612"
     },
     { 
-    id: "1", 
+    id: "4", 
     category: "Campera",    
     name: "Campera de Simil cuero",     
     price:100, 
     stock:7, 
-    img: 
+    img: "https://media.istockphoto.com/photos/modern-woman-picture-id696869378?s=612x612"
     },
-
-
-
-
+    { 
+    id: "5", 
+    category: "Campera",    
+    name: "Campera de Jeans",     
+    price:200, 
+    stock:12, 
+    img: "https://media.istockphoto.com/photos/jean-jacket-isolated-on-white-front-and-back-views-ready-for-clipping-picture-id1352728757?s=612x612"
+    },
+    { 
+    id: "6", 
+    category: "Campera",    
+    name: "Campera Puffer",     
+    price:300, 
+    stock:11, 
+    img: "https://media.istockphoto.com/photos/strange-woman-adjusting-jacket-picture-id1157459060?s=612x612"
+    },
+    {
+    id: "7", 
+    category: "Jeans",    
+    name: "Jeans Chupin",     
+    price:100, 
+    stock:5, 
+    img: "https://media.istockphoto.com/photos/smiling-woman-leaning-on-white-wall-with-bag-picture-id857963320"
+    },
+    {
+    id: "8", 
+    category: "Jeans",    
+    name: "Jeans Mom",     
+    price:200, 
+    stock:9, 
+    img: "https://media.istockphoto.com/photos/portrait-of-young-woman-standing-alone-in-public-park-on-sunny-day-picture-id1305813179?s=612x612"
+    },
+    {
+    id: "9", 
+    category: "Jeans",    
+    name: "Jeans Slouchy",     
+    price:300, 
+    stock:12, 
+    img: "https://media.istockphoto.com/photos/cute-girl-in-the-city-eating-icecream-picture-id1129872085?s=612x612"
+    },
+    
 ]
 
 export const getFetch = (id)=> {
