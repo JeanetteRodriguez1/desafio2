@@ -12,8 +12,11 @@ const ItemDetail = ({product}) => {
     setInputType ('input')
   }
 
+  const {addCart, cartList} = useCartContext()
+
   function onAdd (quantity) {
     console.log(`${quantity} ${product.name}`)
+    addCart({...product, quantity})
   }
 
   return (

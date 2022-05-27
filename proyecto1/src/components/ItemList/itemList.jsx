@@ -1,5 +1,7 @@
-import Item from "../ItemCount/itemcount"
+import Item from "../Item/Item"
+
 const ItemList = ({items}) => {
+
      
     return (
         <div>

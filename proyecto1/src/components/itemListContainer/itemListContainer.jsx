@@ -8,9 +8,10 @@ import { getFetch } from "../helpers/getFetch"
 
 const ItemListContainer = ()=>{
     const [products, setItem] = useState([])
+    const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const {id} = useParams()    
+    /*const {id} = useParams()*/    
     const {category} = useParams()    
 
     useEffect(()=>{
@@ -18,21 +19,26 @@ const ItemListContainer = ()=>{
         if(category){
             getFetch()
                 .then(resp => setItem(resp.filter((prods)=>prods.category === id)))
-                .then(resp => setItem(resp.filter((prods)=>prods.category === category)))
+                .then(resp => setProducts(resp.filter((prods)=>prods.category === category)))
                 .catch((err)=>console.log(err))
                 .finally (()=>setLoading(false))
-        }else{
+        }else{                  
             getFetch()
                 .then(resp => setItem(resp))
+                .then(resp => setProducts(resp))
                 .catch((err)=>console.log(err))
                 .finally (()=>setLoading(false))
 
         }
-    }   
-        }, [id]),
+        }
+    )
+
+  
+       
         },[category]
     
 
+    
     return(
 
         <div className="container">
@@ -40,6 +46,7 @@ const ItemListContainer = ()=>{
             <h2>Cargando..</h2>
             :
             <ItemList items={products}/>
+            <ItemList products={products}/>
             }
         </div>
     )
