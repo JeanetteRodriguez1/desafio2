@@ -13,7 +13,96 @@ const CartContextProvider = ({children}) =>{
     //estados y funciones globales
     const [cartList, setcartList] = useState([])
 
-    function inCart(id){
+    //añadir productos al carrito
+    function addCart (item){
+        const index = cartList.findIndex(product => product.id === item.id)
+        if (index !== -1){
+            const oldQty = cartList[index].quantity
+            cartList[index].quantity += oldQty
+            setcartList([...cartList])
+            
+            
+        }else{
+            setcartList([
+                ...cartList,
+                item
+            ])
+        }
+    }
+
+    //eliminar
+
+    const removeItem = (id) =>{
+        setcartList(cartList.filter(prod=>prod.id !==id))
+    }
+
+    //sumar cant total
+    const totalQty = () =>{
+        return cartList.reduce((counter,product)=> counter += product.quantity, 0)
+    }
+
+    //sumar precio total
+    const totalPrice = () =>{
+        return cartList.reduce((counter,product)=> counter + (product.quantity * product.price), 0)
+    }
+
+
+    //const eliminarItem = (id) =>{}
+
+    const deleteCart = () =>{
+        setcartList ([])
+    }
+
+    return(
+        <CartContext.Provider value={ {
+             cartList,
+             addCart,
+             deleteCart,
+             removeItem,
+             totalQty,
+             totalPrice         
+        }}>
+            {children}
+        </CartContext.Provider>
+    )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*function inCart(id){
         return cartList.some(product => product.id === id)
     }
 
@@ -48,6 +137,6 @@ const CartContextProvider = ({children}) =>{
             {children}
         </CartContext.Provider>
     )
-}
+}*/
 
 export default CartContextProvider

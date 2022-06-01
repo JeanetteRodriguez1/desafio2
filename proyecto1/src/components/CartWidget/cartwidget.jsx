@@ -4,15 +4,21 @@ import { Link } from "react-router-dom";
 import { Link,NavLink } from "react-router-dom";
 
 
-const CartWidget = () => {
-  return (
-    <Link to="/cart">
-      <div>
-       <a href="#" className="bCarrito"><BsCart2/></a>
-      </div>
-      <NavLink to="/cart" className="bCarrito"><BsCart2/></NavLink>
-      </Link>
-  )
-}
+    const CartWidget = () => {
+      const {totalQty} = useCartContext()
+      
+      return (
+        <NavLink to="/cart" className={bCarrito}>
+          <BsCart2 className="icnCart"/>
+          {totalQty() !== 0 && totalQty()}
+          <BsCart2/>
+        </NavLink>
+        
+      )
+    }
+
+
+
+   
 
 export default CartWidget
