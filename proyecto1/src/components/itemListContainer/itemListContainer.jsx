@@ -18,7 +18,7 @@ const ItemListContainer = ()=>{
         const db = getFirestore()
         if(category){
             if(category){
-                const queryCollection = collection(db,"products")   
+                const queryCollection = collection(db,"productos")   
                 const queryCollectionFilter = query(queryCollection, where("category", "==" , category))
                 getDocs(queryCollectionFilter)
                 .then (resp => setProducts(resp.docs.map(product => ({ id:product.id, ...product.data() }))))
@@ -38,7 +38,7 @@ const ItemListContainer = ()=>{
 
   
        
-        },[category]
+        }, [category]
     
 
     
