@@ -9,12 +9,14 @@ export const ItemDetailContainer = () => {
     const [loader, setLoader] = useState(true)
 
     useEffect(()=>{
-        getFetch(id)
-            .then((res) => {setProduct(res)})
+        const db = getFirestore()
+        const dbQuery = doc(db, "products", id)
+       getDoc(dbQuery)
+            .then((res) => setProduct ( { id : res.id, ...res.data() } ) )
             .catch((err) => {console.log(err)})
             .finally(() => setLoader(false))
 
-    },[])
+    },[id])
 
     return(
         <div>

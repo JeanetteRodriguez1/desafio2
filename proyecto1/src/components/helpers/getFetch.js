@@ -1,4 +1,4 @@
-const products = [
+/*const products = [
     {id: "1", category: "Camisa" ,name: "Camisa Gasa", price:100, img: "https://media.istockphoto.com/photos/female-fashion-clothes-flat-lay-square-picture-id1160533209?s=612x612"},
     {id: "2", category: "Camisa" ,name: "Camisa de Jeans", price:200, img: "https://media.istockphoto.com/photos/modern-millennial-woman-with-pink-hair-picture-id1140764346?s=612x612"},
     {id: "3", category: "Camisa" ,name: "Camisa de Algodon", price:300, img: "https://media.istockphoto.com/photos/attractive-afro-american-woman-picture-id807375326?s=612x612"},
@@ -82,7 +82,7 @@ const products = [
     img: "https://media.istockphoto.com/photos/cute-girl-in-the-city-eating-icecream-picture-id1129872085?s=612x612"
     },
     
-]
+]*/
 
 export const getFetch = (id)=> {
     return new Promise((resolve)=>{
