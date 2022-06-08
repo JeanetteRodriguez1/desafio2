@@ -16,33 +16,19 @@ const ItemListContainer = ()=>{
 
     useEffect(()=>{
         const db = getFirestore()
-        if(category){
-            if(category){
-                const queryCollection = collection(db,"productos")   
-                const queryCollectionFilter = query(queryCollection, where("category", "==" , category))
-                getDocs(queryCollectionFilter)
-                .then (resp => setProducts(resp.docs.map(product => ({ id:product.id, ...product.data() }))))
-                .catch((err)=>console.log(err))
-                .finally (()=>setLoading(false))
-        }else{                  
-            const queryCollection = collection(db,"products")
-            getDocs(queryCollection)
-                .then (resp => setProducts(resp.docs.map(product => ({ id:product.id, ...product.data() }))))
-                .catch((err)=>console.log(err))
-                .finally (()=>setLoading(false))
+        
+        const queryCollection = collection(db,"products")
+        const queryCollectionFilter = category ? query(queryCollection, where("category", "==" , category)):queryCollection
+        getDocs(queryCollectionFilter)
+            .then (resp => setProducts(resp.docs.map(product => ({ id:product.id, ...product.data() }))))
+            .catch((err)=>console.log(err))
+            .finally (()=>setLoading(false))  
 
-        }
-        }
-    )
-
-
-  
-       
-        }, [category]
+         
+        }, [category])
     
 
-    
-    return(
+        return(
 
         <div className="container">
             {loading ?
@@ -130,5 +116,4 @@ const ItemListContainer = ()=>{
         </div>
     )
     }*/
-
 

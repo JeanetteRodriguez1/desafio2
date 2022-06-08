@@ -3,6 +3,8 @@ import CartWidget from "./CartWidget/CartWidget"
 import "./Navbar.css";
 import logo from "./src/MalaMia.png"
 import { Link, NavLink} from "react-router-dom";
+import { FiMenu } from "react-icons/fi";
+import { FiChevronLeft } from "react-icons/fi";
 
 function Navbar (){
     return(
@@ -10,6 +12,8 @@ function Navbar (){
             <header>
                 <div className="contrNav">
                     <div className="navbar">
+                        <label htmlFor="btn-menu" className="icon-menu"> <FiMenu/> </label>
+
                         <img className="logo" src={logo} alt="logo"/>
 
                             <nav>
@@ -26,14 +30,16 @@ function Navbar (){
                                     <li> <p>Jeans</p></li>
                                     <p> <button className="bNeon">Contacto</button></p>
                                     <li><NavLink to = '/'>Inicio</NavLink></li>
-                                    <li><NavLink to = '/category/vestidos'>Camisa</NavLink></li>
-                                    <li><NavLink to = '/category/remeras'>Campera</NavLink></li>
-                                    <li><NavLink to = '/category/pantalones'>Jeans</NavLink></li>
+                                    <li><NavLink to = '/category/camisa'>Camisa</NavLink></li>
+                                    <li><NavLink to = '/category/campera'>Campera</NavLink></li>
+                                    <li><NavLink to = '/category/jeans'>Jeans</NavLink></li>
                                 </ul>
                             </nav>    
                             
                             <CartWidget/>
                     </div>
+                    <label htmlFor="btn-menu" className="icon-equis"><FiChevronLeft/></label>
+
                 </div>
             </header>
         </>

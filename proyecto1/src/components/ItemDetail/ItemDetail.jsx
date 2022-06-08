@@ -33,9 +33,7 @@ const ItemDetail = ({product}) => {
             <h4 className='m-5 mb-5'>Detalles</h4>
             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate recusandae laborum, placeat explicabo totam optio culpa amet pariatur? Facilis quos, suscipit illo officia reiciendis minus autem ratione esse iste minima.</span>
 
-            <ItemCount initial={1} stock={5} onAdd={(quantity)=>alert(`${quantity} productos`)}/>
-          
-            {
+           {
               inputType === 'button' ?
                 <ItemCount 
                   initial={1} 

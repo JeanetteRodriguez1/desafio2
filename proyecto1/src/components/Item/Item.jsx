@@ -7,7 +7,6 @@ import { Link } from "react-router-dom"
 const Item = ({name, price,img,id}) =>{
     return(
         <div className="galeria">
-        
             <div className="galer">
                 <Link to= {`/detail/${id}`} >
 

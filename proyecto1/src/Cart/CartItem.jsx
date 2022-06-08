@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useCartContext } from "../../Context/CartContext"
 import { FiChevronDown,FiChevronUp } from "react-icons/fi"
+import { RiDeleteBinLine} from "react-icons/ri";
 
 
 export default function CartItem({product}) {
@@ -17,6 +18,7 @@ export default function CartItem({product}) {
                                 <div className="des">
                                     <h5>{product.name}</h5>
                                 </div>
+                                    <button className="btn"onClick={()=>removeItem(product.id)}><RiDeleteBinLine/></button>
                             </div>
                         </div>
                     </td>
