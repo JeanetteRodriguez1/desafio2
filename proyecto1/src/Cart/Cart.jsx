@@ -127,14 +127,7 @@ export const Cart = () => {
        </div>
     </>
   )
-         
+       
   }
 
-  /*return (
-      <div>Cart</div>,
-    <div>
-      {cartList.map(product => <li> {product.name} - ${product.price} - {product.quantity} </li>)}
-      <button onClick={deleteCart}>Reiniciar Compra</button>
-    </div>
-  )
-}*/
+  

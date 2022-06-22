@@ -63,20 +63,6 @@ const CartContextProvider = ({children}) =>{
     )
 }
 
-/*
-function addCart (item){
-    if (inCart(item.id)){
-        let i = cartList.findIndex(product => product.id === item.id)
-        const newCartList = cartList
-        newCartList[i].quantity += item.quantity
-        setcartList(newCartList)
-    }else{
-        setcartList([
-            ...cartList,
-            item
-        ])
-    }
-}
-*/
+
 
 export default CartContextProvider
